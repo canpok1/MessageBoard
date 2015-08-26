@@ -1,0 +1,97 @@
+﻿# A5:ER FORMAT:10
+# A5:ER ENCODING:UTF8
+# A5:ER Mk-1 Copyright (C)2007 m.matsubara
+# A5:SQL Mk-2 Copyright (C)1997 m.matsubara
+#  http://www.wind.sannet.ne.jp/m_matsu/developer/a5m2/
+
+[Manager]
+ProjectName=MessageBoard
+Author=
+MaxEntityRowShow=1000
+ReadOnlyRecommend=0
+Page=Main
+PageInfo="Main",2,"A3Landscape",$FFFFFF
+LogicalView=0
+DecodeDomain=0
+ViewModePageIndividually=1
+ViewMode=2
+ViewFormat=0
+UseNondependenceDashLine=0
+FontName=Tahoma
+FontSize=6
+PaperSize=A4Landscape
+HeaderLeft=
+HeaderCenter=
+HeaderRight=
+FooterLeft=
+FooterCenter=
+FooterRight=
+ShowPageoutRelation=1
+RDBMSType=6
+RDBMSTypeName=PostgreSQL
+GenerateDropTableStatement=1
+DropTableIfExists=1
+CreateFk=1
+DefaultPkName=%0:s_PKC
+DefaultPkIndexName=%0:s_PKI
+DefaultIndexName=%0:s_IX%1:d
+DefaultFkName=%0:s_FK%1:d
+SqlSeparator=0
+ShowTag=1
+ShowCommonAttributes=0
+
+[Relation]
+Entity1=account
+Entity2=message
+RelationType1=2
+RelationType2=3
+Fields1=id
+Fields2=fk_account
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,930,9070,556,R,R
+Dependence=0
+Caption=
+PName=
+ModifiedDateTime=20150826162505
+LineMode=0
+Bar1=93
+Bar2=907
+Bar3=56
+TermPos1=R
+TermPos2=R
+
+[Entity]
+PName=account
+LName=
+Comment=
+TableOption=
+Page=Main
+Left=700
+Top=100
+Field="","id","@INT","NOT NULL",0,"","",$FFFFFFFF,""
+Field="","name","@VARCHAR","NOT NULL",,"","",$FFFFFFFF,""
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+ModifiedDateTime=20150826163829
+Position="Main",700,100,131,89
+
+[Entity]
+PName=message
+LName=
+Comment=
+TableOption=
+Page=Main
+Left=200
+Top=100
+Field="","id","@INT","NOT NULL",0,"","",$FFFFFFFF,""
+Field="","message","@VARCHAR","NOT NULL",,"","",$FFFFFFFF,""
+Field="","fk_account","@INT","NOT NULL",,"","",$FFFFFFFF,""
+Field="","begin_datetime","@DATETIME","NOT NULL",,"","",$FFFFFFFF,""
+Field="","end_datetime","@DATETIME","NOT NULL",,"","",$FFFFFFFF,""
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+ModifiedDateTime=20150826164046
+Position="Main",200,100,190,149
